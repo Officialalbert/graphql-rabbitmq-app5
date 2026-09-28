@@ -21,3 +21,11 @@ Author { id, name, country, books }
 Book { id, title, year, author }
 Query: books, book(id), authors, author(id)
 Mutation: createBook, createAuthor
+
+
+Клиент → Apollo Server (GraphQL Mutation) → сохранить в памяти
+                                          → отправить сообщение в очередь RabbitMQ
+                                          ↓
+                                    RabbitMQ (queue: book_created)
+                                          ↓
+                                    Consumer (console.log)
