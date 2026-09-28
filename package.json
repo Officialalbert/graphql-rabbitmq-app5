@@ -1,0 +1,14 @@
+{
+  "name": "graphql-rabbitmq-app",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "consumer": "node consumer.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "amqplib": "^0.10.4",
+    "graphql": "^16.9.0"
+  }
+}
